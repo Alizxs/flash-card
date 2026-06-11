@@ -4,15 +4,81 @@
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Flashcards de Mitos e Verdades</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+￼
+
   </head> 
   <body> 
-    <header> 
-    </header> 
- 
-    <main> 
-    </main> 
- 
-    <footer> 
-    </footer> 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+     <div  class="card" style="width: 18rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqwcribVwPZ2ZLbKKTmc--fHHGnEWtAeBCgw&s" class="card-img-top" alt="...">
+      <div id="borboletacard" class="card-body">
+      <h5 class="card-title" id="borboletatitle">Borboleta não poloniza a flor</h5>
+      <p class="card-text" id="borboletatext">As borboletas não tem capacidade de polonizar flores.</p>
+    </div>
+    
+    <div id="gorilacard" class="card" style="width: 18rem;">
+      <img src="https://s2-g1.glbimg.com/RXkIPoI2JElY-TUYYdELq5lps_g=/0x0:551x551/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/5/E/7UeiJbTWeJMqgaV1dT8w/58377565-10157037196920782-6526628411761229824-n.png" class="card-img-top" alt="...">
+      <div class="card-body" id="gorilacard">
+      <h5 class="card-title" id="gorilatitle">Gorila tem 3 metro de altura</h5>
+      <p class="card-text" id="gorilatext">Gorilas possuem 3 metros de altura</p>
+    </div>
+
+    <div id="galinhacard" class="card" style="width: 18rem;">
+      <img src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia11604/a-galinha-domestica-e-suas-principais-racas-comerciais-cpt11.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+      <h5 class="card-title" id="galinhatitle">Galinhas podem voar</h5>
+      <p class="card-text" id="galinhatext">Galinhas conseguem sim, levantar voos a grandes distancias, só não o fazem por preguiça</p>
+    </div>
+  </div>
+   <script>
+    const borboletacard = document.getElementById("borboletacard")
+    const borboletatitle = document.getElementById("borboletatitle")
+    const borboletatext = document.getElementById("borboletatext")
+
+    borboletacard.addEventListener("mouseover", () => {
+         borboletatitle.innerHTML = "Borbolelas polenizam as flores de fato"
+         borboletatext.innerHTML = "Borboleta são responsaveis pela polonização das flores"
+    })
+    borboletacard.addEventListener("mouseleave", () => {
+        borboletatitle.innerHTML = "Borboleta não poloniza a flor"
+          borboletatext.innerHTML = "As borboletas não tem capacidade de polonizar flores."
+    })
+    const gorilacard = document.getElementById("gorilacard")
+    const gorilatitle = document.getElementById("gorilatitle")
+    const gorilatext = document.getElementById("gorilatext")
+
+    gorilacard.addEventListener("mouseover", () => {
+         gorilatitle.innerHTML = "Gorilas tem no maximo 1,80m"
+         gorilatext.innerHTML = "Gorilas geralmente não pasam do 2 metros de altura"
+    })
+    gorilacard.addEventListener("mouseleave", () => {
+        gorilatitle.innerHTML = "Gorila tem 3 metro de altura."
+          gorilatext.innerHTML = "Gorilas possuem 3 metros de altura."
+    })
+    const galinhacard = document.getElementById("galinhacard")
+    const galinhatitle = document.getElementById("galinhatitle")
+    const galinhatext = document.getElementById("galinhatext")
+
+    galinhacard.addEventListener("mouseover", () => {
+         galinhatitle.innerHTML = "Galinhas não conseguem voar"
+         galinhatext.innerHTML = "Galinhas não possuem força o bastante para levantar seu proprio peso para voo"
+    })
+    galinhacard.addEventListener("mouseleave", () => {
+        galinhatitle.innerHTML = "Galinhas podem voar."
+          galinhatext.innerHTML = "Galinhas conseguem sim, levantar voos a grandes distancias, só não o fazem por preguiça."
+    })
+
+
+   </script>
+   <style>
+    body {
+      display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  padding: 20px;
+  align-items: center; 
+    }
+   </style>
   </body> 
 </html> 
